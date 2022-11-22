@@ -1,0 +1,489 @@
+body{
+    background-color: #000000;
+    width: 100vw;
+    height: 100vh;
+
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+p{
+    color: white;
+}
+
+img{
+    max-width: 100%;
+    display: block;
+}
+
+.Main{
+    width:70vw;
+    height: 90vh;
+    min-width: 200px;
+    min-height: 200px;
+    margin: 0%;
+    background-color:rgb(0, 0, 0);
+    float:left; 
+
+    position: relative;
+    display: flex;
+}
+
+.Main:hover #Selector{
+    width: 120px;
+    height:50px;
+    border-radius: 25px;
+    margin: 0%;
+    background-color:#606060;
+
+    position: relative;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+
+    z-index: 3;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0.3;
+}
+
+.Main:hover #Selector:hover{
+    width: 120px;
+    height:50px;
+    border-radius: 25px;
+    margin: 0%;
+    background-color:#0f0f0f;
+
+    position: relative;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+
+    z-index: 3;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0.3; 
+}
+
+#mainmic{
+    position: absolute;
+    top:1%;
+    right: 1%;
+    height: 30px;
+    width: 30px;
+}
+
+.Usericon_big{
+    border-radius: 50%;
+    width: 160px;
+    height:160px;
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    z-index: 1;
+}
+
+.selector{
+    width: 120px;
+    height:50px;
+    border-radius: 25px;
+    margin: 0%;
+    background-color:#606060;
+
+    position: relative;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+
+    z-index: 3;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0.3;
+
+    display: none;
+}
+
+.selector_icon{
+    width: 30px;
+    height: 30px;
+    position: relative;
+}
+
+#mainpin{
+    position: absolute;
+    bottom: 2vh;
+    left: 0%;
+    height: 30px;
+    width: 30px;
+}
+
+.main_name{
+    position: absolute;
+    bottom: 2px;
+    left:40px;
+}
+
+#Sidebar{
+    width:30vw;
+    height: 90vh;
+    min-width: 220px;
+    left: -10px;
+
+    font-size:15px;
+    font-weight:bold;
+    background: color rgb(138, 159, 109);;
+
+    float:right;
+    right: 0px;
+    top: 0px;
+    position: relative;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    justify-content: space-evenly;
+    align-content: center;
+
+    z-index: 0;
+    overflow: hidden;
+}
+
+#Sidebar > div{
+    box-sizing: border-box;
+    display: flex;
+    overflow: hidden; 
+}
+
+.User{
+    background-color: #6e6b6b;
+    opacity: 0.7;
+    max-width: 33%;
+    max-width: 40%;
+    min-width: 150px;
+    min-height: 120px;
+    border-radius: 15px;
+    z-index: 5;
+    
+    flex-direction: row;
+    display: flex;
+    position: relative;
+    margin: 3px;
+    padding: 0px;
+}
+
+.Usericon_small{
+    border-radius: 50%;
+    border: 0px;
+    padding: 0px;
+    width: 100px;
+    height:100px;
+
+    align-self: center;
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+}
+
+.sidebar_mic{
+    border-radius: 50%;
+    width: 30px;
+    height:30px;
+
+    position: absolute;
+    top: 5px;
+    right: 5px;
+}
+
+.sidebar_name{
+    font-size: 12px;
+    height: 12px;
+    
+    float: left;
+    align-self: flex-end;
+    position: relative;
+    left: 10px;
+}
+
+.sidebar_cross{
+    border-radius: 50%;
+    width: 30px;
+    height:30px;
+
+    position: absolute;
+    top: 5px;
+    left: 5px;
+}
+
+.selector2{
+    width: 100px;
+    height:40px;
+    border-radius: 20px;
+    background-color:#999696;
+    opacity: 0.5;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-self: center;
+
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+
+    z-index: 7;
+
+    display: none;
+ }
+
+ .User:hover .selector2{
+    width: 100px;
+    height:40px;
+    border-radius: 20px;
+    background-color:#999696;
+    opacity: 0.5;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-self: center;
+
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+
+    z-index: 7; 
+ }
+
+ .User:hover .selector2:hover{
+    width: 100px;
+    height:40px;
+    border-radius: 20px;
+    background-color:#4b4b4b;
+    opacity: 0.5;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-self: center;
+
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+
+    z-index: 7; 
+ }
+
+ .selector_icon2{
+    width: 20px;
+    height: 20px;
+    position: relative;
+}
+
+footer{
+    box-sizing: border-box;
+    height: 10vh;
+    width: 100vw;;
+    min-width: 200px;
+    min-height: 80px;
+    background-color: #000;
+    
+    position:absolute;
+    padding-bottom: 0%;
+    bottom: 0px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+footer > div {
+    box-sizing: border-box; 
+    display: flex;
+    align-items: center;
+    margin: 0px;
+
+}
+
+#foot_time{
+    width:20%;
+    float: left;
+    justify-content: flex-start;
+    background-color: #000;
+    position: relative;
+    left: 5px;
+    overflow: hidden;
+}
+
+#foot_fun{
+    width: 50%;
+    min-width: 400px;
+    justify-content: center;
+    float: left;
+    background-color: rgb(0, 0, 0);
+}
+
+#mic{
+    background-image: url('./figure/microphone2.png');
+    width: 32px;
+    height:32px; 
+    border-radius: 50%;
+    padding: 5px;
+    margin: 5px;
+    background-repeat: round
+}
+
+#btn{
+    display: none;
+}
+
+#btn:checked +label > div{
+    background-image: url('./figure/microphone_mute2.png');
+    width: 32px;
+    height:32px; 
+    border-radius: 50%;
+    padding: 5px;
+    margin: 5px;
+    background-repeat: round
+}
+
+#video{
+    background-image: url('./figure/video.png');
+    width: 32px;
+    height:32px; 
+    border-radius: 50%;
+    padding: 5px;
+    margin: 5px;
+    background-repeat: round 
+}
+
+#btn2{
+    display: none;
+}
+
+#btn2:checked +label > div{
+    background-image: url('./figure/no-video.png');
+    width: 32px;
+    height:32px; 
+    border-radius: 50%;
+    padding: 5px;
+    margin: 5px;
+    background-repeat: round
+}
+
+.foot_sidebar{
+    width: 30%;
+    min-width: 200px;
+    background-color: rgb(0, 0, 0);
+    position: relative;
+    float:right;
+    justify-content: flex-end;
+    right: 30px;
+    overflow: hidden;
+}
+
+.bottom_con{
+    width: 40px;
+    height:40px;
+    padding: 5px;  
+}
+
+.bottomfun{
+    width: 40px;
+    height:40px; 
+    border-radius: 50%;
+    padding: 5px;
+}
+
+#bottomfun2{
+    height:40px;
+    padding: 5px; 
+}
+
+#bottomfun3{
+    width: 40px;
+    padding: 5px;
+}
+
+.fun_index{
+    display: none;
+    position: relative;
+    top:0px;
+    left:0px;
+    font-size: 8px;
+    background-color: #6e6b6b;
+    border-radius: 10%;
+}
+
+.bottom_con:hover  .fun_index{
+    display: block;
+    position: relative;
+    top: -90px;
+    left: -40px;
+    text-align: center;
+    justify-self: center;
+    align-self: center;
+    width: 100px;
+    height: 20px;
+    background-color: rgb(86, 86, 86);
+}
+
+@media screen and (max-width: 720px){
+    .foot_sidebar{
+        overflow: hidden;
+    }
+    .User{
+        width: 35%;
+        height: 19%;
+    }
+    #Main{
+        width: 100vw;
+    }
+    #Sidebar{
+        display: none;
+    }
+
+    #foot_time{
+        display: none;
+    }
+
+    #foot_fun{
+        width: 100%;
+    }
+    .foot_sidebar{
+        display: none;
+    }
+}
+
+
+@media(min-width: 720px){
+    .User{
+        width: 35%;
+        height: 19%;
+    } 
+}
+
+@media(min-width: 1024px){
+    body{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .User{
+        height: 25%;
+        width: 48%;
+    }
+}
