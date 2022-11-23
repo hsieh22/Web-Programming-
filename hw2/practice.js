@@ -7,6 +7,49 @@ let sidebar_users = [user1, user2, user3, user4, user5];
 let sidebar_username = ["user1", "user2", "user3", "user4", "user5"];
 let id = 5;
 
+// Remove user when cross is clicked
+let removeNumber = 0;
+
+removeUser = (user, username) => {
+    user.style.display = 'none';
+    user.parentNode.removeChild(user);
+    removeNumber += 1;
+
+    if(removeNumber === 5){
+        console.log("remove number = 5 !!")
+
+        //Pin the last user
+        lastUser = document.getElementsByClassName("User")[0];
+        const index = sidebar_users.indexOf(lastUser);
+        if(pin === false){
+            pinUser(lastUser, sidebar_username[index]);
+        }
+
+        //CSS排版調整
+        document.body.style.width = "100vw";
+        main_user = document.getElementById('Main'); 
+        main_user.style.height = "90vh";
+        main_user.style.width = "100vw";
+        main_user.style.background = "black";
+        main_user.removeAttribute("class"); 
+    }
+}
+
+user1_cross = document.getElementById("cross1");
+user1_cross.addEventListener("click", () => removeUser(sidebar_users[0], sidebar_username[0]));
+
+user2_cross = document.getElementById("cross2");
+user2_cross.addEventListener("click", () => removeUser(sidebar_users[1], sidebar_username[1]));
+
+user3_cross = document.getElementById("cross3");
+user3_cross.addEventListener("click", () => removeUser(sidebar_users[2], sidebar_username[2]));
+
+user4_cross = document.getElementById("cross4");
+user4_cross.addEventListener("click", () => removeUser(sidebar_users[3], sidebar_username[3]));
+
+user5_cross = document.getElementById("cross5");
+user5_cross.addEventListener("click", () => removeUser(sidebar_users[4], sidebar_username[4]));
+
 // pin the user into main 
 // onclick swap two element
 // still need to fix size
@@ -112,8 +155,8 @@ pinUser = (user, username) => {
         unpin.addEventListener("click", unpinAll);
 
         //delete from sidebar
-        removeUser(user)
         removeNumber -= 1;  //並沒有減少user數量
+        removeUser(user)
 
         //CSS排版調整
 
@@ -265,45 +308,3 @@ unpin.addEventListener("click", unpinAll);
 
 
 
-// Remove user when cross is clicked
-let removeNumber = 0;
-
-removeUser = (user, username) => {
-    user.style.display = 'none';
-    user.parentNode.removeChild(user);
-    removeNumber += 1;
-
-    if(removeNumber === 5){
-        console.log("remove number = 5 !!")
-
-        //Pin the last user
-        lastUser = document.getElementsByClassName("User")[0];
-        const index = sidebar_users.indexOf(lastUser);
-        if(pin === false){
-            pinUser(lastUser, sidebar_username[index]);
-        }
-
-        //CSS排版調整
-        document.body.style.width = "100vw";
-        main_user = document.getElementById('Main'); 
-        main_user.style.height = "90vh";
-        main_user.style.width = "100vw";
-        main_user.style.background = "black";
-        main_user.removeAttribute("class"); 
-    }
-}
-
-user1_cross = document.getElementById("cross1");
-user1_cross.addEventListener("click", () => removeUser(sidebar_users[0], sidebar_username[0]));
-
-user2_cross = document.getElementById("cross2");
-user2_cross.addEventListener("click", () => removeUser(sidebar_users[1], sidebar_username[1]));
-
-user3_cross = document.getElementById("cross3");
-user3_cross.addEventListener("click", () => removeUser(sidebar_users[2], sidebar_username[2]));
-
-user4_cross = document.getElementById("cross4");
-user4_cross.addEventListener("click", () => removeUser(sidebar_users[3], sidebar_username[3]));
-
-user5_cross = document.getElementById("cross5");
-user5_cross.addEventListener("click", () => removeUser(sidebar_users[4], sidebar_username[4]));
